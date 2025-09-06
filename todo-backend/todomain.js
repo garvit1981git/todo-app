@@ -37,7 +37,7 @@ app.use(express.static("dist"))
 app.use(urlencoded({ extended: true }))
 app.use(express.json())
 app.use(todoitemrouter)
-mongoose.connect(process.env.mongodburi).then(() => {
+mongoose.connect(process.env.MONGODB_URI).then(() => {
   console.log("sucsesfully connedcted to mongoose")
   app.listen(PORT, () => {
 
