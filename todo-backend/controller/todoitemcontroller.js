@@ -16,7 +16,7 @@ dotenv.config()
 // Load environment variables from .env into process.env
 
 import { check, validationResult } from "express-validator"
-import Userschema from "../../../main/model/user.js"
+
 let posttodo = (req, res) => {
   let userid = req.user._id
   // console.log("post", userid)
