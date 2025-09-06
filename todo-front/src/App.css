@@ -1,0 +1,347 @@
+/* Signup page styles */
+.signup-container {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(120deg, #e3f2fd 0%, #fff 100%);
+}
+.signup-form {
+  background: #fff;
+  padding: 36px 32px;
+  border-radius: 18px;
+  box-shadow: 0 6px 32px rgba(25, 118, 210, 0.10);
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  min-width: 340px;
+}
+.signup-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1976d2;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.signup-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.signup-field label {
+  font-size: 1.05rem;
+  color: #1976d2;
+  font-weight: 600;
+}
+.signup-field input {
+  padding: 12px 16px;
+  border: 2px solid #bdbdbd;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  outline: none;
+  background: #f5faff;
+  transition: border-color 0.2s;
+}
+.signup-field input:focus {
+  border-color: #1976d2;
+}
+.signup-btn {
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.08);
+  transition: background 0.2s, box-shadow 0.2s;
+  margin-top: 8px;
+}
+.signup-btn:hover {
+  background: #1565c0;
+  box-shadow: 0 4px 16px rgba(25, 118, 210, 0.15);
+}
+/* Login page styles */
+.login-container {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(120deg, #e3f2fd 0%, #fff 100%);
+}
+.login-form {
+  background: #fff;
+  padding: 36px 32px;
+  border-radius: 18px;
+  box-shadow: 0 6px 32px rgba(25, 118, 210, 0.10);
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  min-width: 340px;
+  border: 1.5px solid #1976d2;
+}
+.login-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1976d2;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.login-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.login-field label {
+  font-size: 1.05rem;
+  color: #1976d2;
+  font-weight: 600;
+}
+.login-field input {
+  padding: 12px 16px;
+  border: 2px solid #bdbdbd;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  outline: none;
+  background: #f5faff;
+  transition: border-color 0.2s;
+}
+.login-field input:focus {
+  border-color: #1976d2;
+}
+.login-btn {
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.08);
+  transition: background 0.2s, box-shadow 0.2s;
+  margin-top: 8px;
+}
+.login-btn:hover {
+  background: #1565c0;
+  box-shadow: 0 4px 16px rgba(25, 118, 210, 0.15);
+}
+/* Navbar beautification */
+.navbar {
+  width: 100%;
+  background: linear-gradient(90deg, #1976d2 0%, #64b5f6 100%);
+  color: #fff;
+  padding: 18px 0 14px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 12px rgba(25, 118, 210, 0.10);
+  margin-bottom: 36px;
+  border-radius: 0 0 18px 18px;
+}
+.navbar-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-left: 40px;
+  letter-spacing: 1.5px;
+  text-shadow: 0 2px 8px rgba(25, 118, 210, 0.10);
+}
+.navbar-links {
+  display: flex;
+  gap: 36px;
+  list-style: none;
+  margin-right: 40px;
+  padding: 0;
+}
+.navbar-links li {
+  color: #fff;
+  font-size: 1.15rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 8px 18px;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+.navbar-links li:hover {
+  background: #e3f2fd;
+  color: #1976d2;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.10);
+}
+/* Navbar styles */
+.navbar {
+  width: 100%;
+  background: linear-gradient(90deg, #1976d2 0%, #64b5f6 100%);
+  color: #fff;
+  padding: 16px 0 12px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.08);
+  margin-bottom: 32px;
+}
+.navbar-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-left: 32px;
+  letter-spacing: 1px;
+}
+.navbar-links {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+  margin-right: 32px;
+}
+.navbar-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.08rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.navbar-links li a:hover {
+  color: #e3f2fd;
+}
+.task-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f5faff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.05);
+  padding: 12px 18px;
+  margin-bottom: 14px;
+}
+.task-name {
+  flex: 2;
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: 500;
+}
+.task-date {
+  flex: 1;
+  font-size: 1rem;
+  color: #1976d2;
+  text-align: center;
+}
+.delete-btn {
+  background: #e53935;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 18px;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.delete-btn:hover {
+  background: #b71c1c;
+  box-shadow: 0 2px 8px rgba(229,57,53,0.12);
+}
+.button, button {
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.08);
+  transition: background 0.2s, box-shadow 0.2s;
+  margin-top: 8px;
+}
+.button:hover, button:hover {
+  background: #1565c0;
+  box-shadow: 0 4px 16px rgba(25, 118, 210, 0.15);
+}
+/* app.css - Basic styles for your Todo App */
+body {
+  background: #000000;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.app-container {
+  max-width: 600px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 32px 24px;
+}
+.header {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #1976d2;
+  margin-bottom: 28px;
+}
+.todo-list {
+  margin-top: 18px;
+}
+.add-todo-form {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.add-todo-form input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 2px solid #bdbdbd;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+}
+.add-todo-form button {
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 18px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.add-todo-form button:hover {
+  background: #1565c0;
+}
+
+/* Custom styles for App.jsx structure */
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1976d2;
+  margin-top: 40px;
+  margin-bottom: 32px;
+  letter-spacing: 1px;
+}
+.inputitem {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 32px;
+}
+.input, .date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.input input, .date input {
+  padding: 12px 18px;
+  border: 2px solid #bdbdbd;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  outline: none;
+  width: 220px;
+  margin-bottom: 8px;
+  background: #f5faff;
+  transition: border-color 0.2s;
+}
+.input input:focus, .date input:focus {
+  border-color: #1976d2;
+}
