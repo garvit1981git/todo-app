@@ -35,9 +35,9 @@ import axios from "axios"
 //   return data
 // }
 
-
+let url = "https://todo-app-3-xeaf.onrender.com"
 let posttodo = async (task, date) => {
-  let res = await axios.post("http://localhost:3000", { task, date }, { withCredentials: true })
+  let res = await axios.post(url, { task, date }, { withCredentials: true })
   console.log("post", res)
   console.log("postdata", res.data)
   return res.data
@@ -45,14 +45,14 @@ let posttodo = async (task, date) => {
 
 
 let gettodo = async () => {
-  let res = await axios.get("http://localhost:3000/todos", { withCredentials: true });
+  let res = await axios.get(`${url}/todos`, { withCredentials: true });
   // console.log("get", res)
   console.log(res)
   return res
 }
 
 let removetodo = async (id) => {
-  let res = await axios.delete(`http://localhost:3000/${id}`, { withCredentials: true })
+  let res = await axios.delete(`${url}/${id}`, { withCredentials: true })
   // console.log("delete", res)  
   return res.data
 }
@@ -61,7 +61,7 @@ let removetodo = async (id) => {
 
 
 let postlogin = async (loginpass, loginemail) => {
-  let res = await axios.post("http://localhost:3000/postlogin", {
+  let res = await axios.post(`${url}/postlogin`, {
     loginpass, loginemail
   }, { withCredentials: true })
   console.log("post session", res)
@@ -70,8 +70,8 @@ let postlogin = async (loginpass, loginemail) => {
 
 
 let postremovesession = async () => {
-  let res = await axios.post("http://localhost:3000/loginrem",   {},                                // empty body
-  { withCredentials: true }  )
+  let res = await axios.post(`${url}/loginrem`, {},                                // empty body
+    { withCredentials: true })
   console.log("post session", res)
   return res
 }
@@ -80,7 +80,7 @@ let postremovesession = async () => {
 
 
 let registeruser = async (name, email, password) => {
-  let res = await axios.post("http://localhost:3000/signup", { name, email, password }, { withCredentials: true })
+  let res = await axios.post(`${url}/signup`, { name, email, password }, { withCredentials: true })
   console.log("register user", res)
   return res
 }
