@@ -113,8 +113,8 @@ let postlogin = async (req, res) => {
     // 4. Set cookie
     res.cookie("Token", token, {
       httpOnly: true,
-      secure: false,   // use true in production with HTTPS
-      sameSite: "lax",
+      secure: true,   // use true in production with HTTPS
+      sameSite: "None",
       path: "/"
     });
 
@@ -137,10 +137,10 @@ let postlogin = async (req, res) => {
 let postremovesession = (req, res) => {
   console.log("in logout")
   res.clearCookie("Token", {
-    httpOnly: true,
-    secure: false,   // use true in production with HTTPS
-    sameSite: "lax",
-    path: "/"
+       httpOnly: true,
+      secure: true,   // use true in production with HTTPS
+      sameSite: "None",
+      path: "/"
   });
   res.status(200).json({ message: "logged out successfully", isloggedin: false })
 
