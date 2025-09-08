@@ -30,7 +30,7 @@ const PORT = process.env.PORT || 3000;
 
 app.use(cookieParser());
 app.use(cors({
-  origin: 'http://localhost:5173',
+  origin: ['http://localhost:5173', "https://todo-app-4-73e1.onrender.com"],
   credentials: true
 }));
 app.use(express.static("dist"))
