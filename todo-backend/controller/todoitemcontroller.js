@@ -137,10 +137,10 @@ let postlogin = async (req, res) => {
 let postremovesession = (req, res) => {
   console.log("in logout")
   res.clearCookie("Token", {
-       httpOnly: true,
-      secure: true,   // use true in production with HTTPS
-      sameSite: "None",
-      path: "/"
+    httpOnly: true,
+    secure: true,   // use true in production with HTTPS
+    sameSite: "None",
+    path: "/"
   });
   res.status(200).json({ message: "logged out successfully", isloggedin: false })
 
@@ -186,24 +186,28 @@ let registerusercontroller = [
     })
   }]
 let authmiddleware = (req, res, next) => {
-  let token = req.cookies.Token
-  console.log(token)
+  const token = req.cookies?.Token;
+  console.log("Auth middleware - token:", token);
+
   if (!token) {
-    req.user = {
-      isloggedin: false
-    }
-    return res.status(401).json({ message: "Not authenticated", state: req.user, array: [] });
+    return res.status(401).json({
+      message: "Not authenticated",
+      state: { isloggedin: false },
+      array: []
+    });
   }
+
   try {
-    let decoded = jwt.verify(token, process.env.JWT_SECRET);
-    // console.log("data", decoded)
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    console.log("Decoded JWT:", decoded);
     req.user = decoded;
-    // console.log("con user", req.user)
     next();
   } catch (err) {
+    console.error("JWT verify failed:", err.message);
     return res.status(403).json({ message: "Invalid or expired token" });
   }
-}
+};
+
 export { posttodo }
 export { gettodos }
 export { removetodo }
